@@ -38,6 +38,7 @@ const taskData: Task[] = [
 export default function Page() {
   return (
     <div className={styles.container}>
+      <h1 className={styles.title}>To-Do List</h1>
       <TodoList taskData={taskData} />
     </div>
   );

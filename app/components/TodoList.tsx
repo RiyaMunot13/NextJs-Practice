@@ -43,7 +43,6 @@ export default function TodoList({ taskData }: TaskTableProps) {
 
   return (
     <div>
-      <h1 className={styles.title}>To-Do List</h1>
       <SearchBar onSearch={handleSearch} />
       <TaskTable tasks={filteredTasks} onToggleStatus={toggleTaskStatus} />
     </div>

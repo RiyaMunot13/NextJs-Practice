@@ -1,0 +1,45 @@
+.toggleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.toggleButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &.completed {
+    background-color: #4caf50;
+  }
+
+  &.pending {
+    background-color: #ccc;
+  }
+}
+
+.toggleSlider {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+
+  .completed & {
+    transform: translateX(15px);
+  }
+
+  .pending & {
+    transform: translateX(-4px);
+  }
+}
+
+.statusText {
+  margin-left: 10px;
+  font-size: 14px;
+}
